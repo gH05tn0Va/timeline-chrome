@@ -1,0 +1,46 @@
+<data
+        wiki-url="http://simile.mit.edu/shelf/"
+        wiki-section="Simile JFK Timeline">
+    <event
+            start="Mon Aug 6 2018 12:30:00 GMT-0600"
+            title="Data 1">
+    </event>
+    <event
+            start="Mon Aug 6 2018 13:00:00 GMT-0600"
+            title="Data 2">
+        Point Data 2
+    </event>
+    <event
+            start="Mon Aug 6 2018 13:30:00 GMT-0600"
+            title="Data 3">
+        Point Data 3
+    </event>
+    <event
+            start="Mon Aug 6 2018 12:00:00 GMT-0600"
+            end="Mon Aug 6 2018 13:00:00 GMT-0600"
+            isDuration="true"
+            title="Period Data 1">
+        Period Data 1
+    </event>
+    <event
+            start="Mon Aug 6 2018 13:30:00 GMT-0600"
+            end="Mon Aug 6 2018 14:30:00 GMT-0600"
+            isDuration="true"
+            title="Period Data 2">
+        Period Data 2
+    </event>
+    <event
+            start="Mon Aug 6 2018 12:00:00 GMT-0600"
+            end="Mon Aug 6 2018 13:30:00 GMT-0600"
+            isDuration="true"
+            title="Period Data 3">
+        Period Data 3
+    </event>
+    <event
+            start="Mon Aug 6 2018 13:00:00 GMT-0600"
+            end="Mon Aug 6 2018 14:30:00 GMT-0600"
+            isDuration="true"
+            title="Period Data 4">
+        Period Data 4
+    </event>
+</data>

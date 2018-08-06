@@ -11,3 +11,13 @@
     color: #535886;
     background: rgba(220,229,239,0.9);
 }
+
+#timeline-iframe{
+    height: 100%;
+    width: 100%;
+    frameborder: no;
+    border: 0;
+    scrolling: yes;
+    marginheight: 0;
+    marginwidth: 20;
+}

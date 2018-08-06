@@ -14,19 +14,26 @@
   },
 
   // Pick one (or none)
-//  "browser_action": {...},
+
+  "browser_action":
+  {
+    "default_icon": "img/icon.png",
+    // 图标悬停时的标题，可选
+    "default_title": "这是一个示例Chrome插件",
+    "default_popup": "html/popup.html"
+  },
 //  "page_action": {...},
 
   // Optional
 //  "action": ...,
 //  "author": ...,
 //  "automation": ...,
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
+//  "background": {
+//    "scripts": [
+//      "background.js"
+//    ],
+//    "persistent": false
+//  },
 //  "chrome_settings_overrides": {...},
 //  "chrome_ui_overrides": {
 //    "bookmarks_ui": {
@@ -52,18 +59,29 @@
       "matches": [
         "<all_urls>"
       ],
-      "css": [
-        "mystyle.css"
-      ],
       "js": [
-//        "jquery.js",
-//        "http://api.simile-widgets.org/timeline/2.3.1/timeline-api.js",
-        "myscript.js"
+        "js/add-widget.js"
+      ],
+      "css": [
+        "html/mystyle.css"
       ],
       "run_at": "document_end"
     }
+//  ,
+//    {
+//      "matches": [
+//        "<all_urls>"
+//      ],
+//      "css": [
+//        "mystyle.css"
+//      ],
+//      "js": [
+//        "add-widget.js"
+//      ],
+//      "run_at": "document_end"
+//    }
   ],
-//  "content_security_policy": "policyString",
+  "content_security_policy": "script-src 'self'; object-src 'self'",
 //  "converted_from_user_script": ...,
 //  "current_locale": ...,
 //  "declarative_net_request": ...,
@@ -97,8 +115,8 @@
 //    "page": "options.html"
 //  },
   "permissions": [
-    "tabs",
-    "declarativeContent"
+    "tabs"
+//    "declarativeContent"
   ],
 //  "platforms": ...,
 //  "requirements": {...},
@@ -114,7 +132,7 @@
 //  "update_url": "http://path/to/updateInfo.xml",
 //  "version_name": "aString",
   "web_accessible_resources": [
-    "js/inject.js",
-    "http://*/*"
+    "timeline_2.3.0/*",
+    "html/*"
   ]
 }
