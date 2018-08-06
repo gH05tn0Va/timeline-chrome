@@ -37,20 +37,20 @@ bd.onload=function onLoad() {
     var bandInfos = [
         Timeline.createBandInfo({
             eventSource:    events[0],
-            width:          "100",
+            width:          "10%",
             intervalUnit:   Timeline.DateTime.HOUR,
             intervalPixels: 400
         }),
         Timeline.createBandInfo({
             eventSource:    events[1],
-            width:          "100",
+            width:          "50%",
             intervalUnit:   Timeline.DateTime.HOUR,
             intervalPixels: 400
         }),
         Timeline.createBandInfo({
             overview:       true,
             eventSource:    events[0],
-            width:          "50",
+            width:          "100%",
             intervalUnit:   Timeline.DateTime.DAY,
             intervalPixels: 400
         })
