@@ -1,13 +1,35 @@
-chrome.runtime.onInstalled.addListener(function(){
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function(){
-        chrome.declarativeContent.onPageChanged.addRules([
+
+let data = [
+    {
+        'wiki-url': "http://simile.mit.edu/shelf/",
+        'wiki-section': "Simile JFK Timeline",
+        'dateTimeFormat': 'Gregorian',
+        'events': [
             {
-                conditions: [
-                    // 只有打开百度才显示pageAction
-                    new chrome.declarativeContent.PageStateMatcher({pageUrl: {urlContains: 'baidu.com'}})
-                ],
-                actions: [new chrome.declarativeContent.ShowPageAction()]
+                'start': "Mon Aug 9 2018 12:30:00 GMT-0600",
+                'title': "'Bay of Pigs' Invasion",
+                'durationEvent': false // Notes: not "false". And no trailing comma.
             }
-        ]);
+        ]
+    },
+    {
+        'wiki-url': "http://simile.mit.edu/shelf/",
+        'wiki-section': "Simile JFK Timeline",
+        'dateTimeFormat': 'Gregorian',
+        'events': [
+            {
+                'start': "Mon Aug 9 2018 13:30:00 GMT-0600",
+                'title': "'Bay of Pigs' Invasion",
+                'durationEvent': false // Notes: not "false". And no trailing comma.
+            }
+        ]
+    }
+];
+
+chrome.extension.onMessage.addListener(//直接接受popup发来的消息
+    function(request, sender, sendResponse) {
+        if (request.cmd == "request_data")
+            sendResponse(data);
+        else
+            sendResponse();
     });
-});

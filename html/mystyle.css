@@ -1,23 +1,72 @@
-#timeline-container{
+#pulllog-container{
     /*display: none;*/
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 150;
-    height: 256px;
+    height: auto;
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     font-size: 16px;
     color: #535886;
     background: rgba(220,229,239,0.9);
 }
 
+#pulllog-option{
+    height: 32px;
+    width: 100%;
+    padding: 0px;
+}
+
+#pulllog-main{
+    display: none;
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    overflow: auto
+}
+
+#pulllog-close-button{
+    position: fixed;
+    right: 32px;
+    z-index: 300;
+    height: 32px;
+    width: 128px;
+    padding: 0px;
+}
+
+#button-1{
+    position: fixed;
+    right: 32px;
+    z-index: 300;
+    height: 32px;
+    width: 128px;
+    padding: 0px;
+}
+
 #timeline-iframe{
-    height: 100%;
+    height: 250px;
     width: 100%;
     frameborder: no;
     border: 0;
     scrolling: yes;
+    padding: 0px;
     marginheight: 0;
-    marginwidth: 20;
+    marginwidth: 40;
+}
+
+#my-timeline-options{
+    height: 32px;
+    width: 100%;
+}
+
+#my-timeline-main{
+    height: auto;
+    width: 100%;
+}
+
+#my-timeline{
+    height: 200px;
+    width: 100%;
+    border: 1px solid #aaa
 }
